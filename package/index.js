@@ -18,7 +18,7 @@ function generateString(stringLength){
 
 function generateBoolean(chance){
     if(chance === undefined) chance = 0.5
-    return (Math.random() < 0.5)
+    return (Math.random() < chance)
 }
 
 function generateNumber(limit){
@@ -26,7 +26,7 @@ function generateNumber(limit){
     return Math.random()*limit
 }
 
-function generateJSONDummyEntry(jsonDefinition){
+function generateJSONDummy(jsonDefinition){
     var jsonDummy = {}
     for(key in jsonDefinition){
         switch (jsonDefinition[key]["type"]){
@@ -55,7 +55,7 @@ function generateJSONDummyArray(jsonDefinition, numberOfEntries){
     }
     dummmyJSONArray = []
     for(arrayIdx = 0; arrayIdx < numberOfEntries; arrayIdx++){
-        dummmyJSONArray[arrayIdx] = generateJSONDummyEntry(jsonDefinition)
+        dummmyJSONArray[arrayIdx] = generateJSONDummy(jsonDefinition)
     }
     return dummmyJSONArray
 }
@@ -66,6 +66,6 @@ function generateJSONDummyArray(jsonDefinition, numberOfEntries){
 
 module.exports = {
     Type,
-    generateJSONDummyEntry,
+    generateJSONDummy,
     generateJSONDummyArray
 }
