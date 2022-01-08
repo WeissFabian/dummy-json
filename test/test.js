@@ -1,4 +1,4 @@
-const {Type, generateJSONDummy, generateJSONDummyArray} = require("dummy-json")
+const {Type, generateJSONDummy, generateJSONDummyArray} = require("dummy-json-js")
 
 let dummyDataExplicit = {
     "String": {"type": Type.String, "length": 30},

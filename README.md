@@ -1,4 +1,4 @@
-# dummy-json
+# dummy-json-js
 ## Description
 This is a npm package to create json dummy data.
 
@@ -6,7 +6,7 @@ This is a npm package to create json dummy data.
 ### Import module
 First import the module.
 ```js
-const {Type, generateJSONDummy, generateJSONDummyArray} = require("dummy-json")
+const {Type, generateJSONDummy, generateJSONDummyArray} = require("dummy-json-js")
 ```
 
 ### Define format
@@ -40,7 +40,7 @@ let dummyDataConfigExplicit = {
 ### Generate a single json object
 To generate a single object use the function generateJSONDummy, and parse the data config object.
 ```js
-const {Type, generateJSONDummy} = require("dummy-json")
+const {Type, generateJSONDummy} = require("dummy-json-js")
 
 let dummyDataConfigExplicit = {
     "stringKey": {"type": Type.String, "length": 123},
@@ -56,7 +56,7 @@ dummyData = generateJSONDummy(dummyDataConfigExplicit)
 To generate a array of json objects use the function generateJSONDummyArray, and parse the data config object.
 You can also parse the number of elements the array should contain, default is 2.
 ```js
-const {Type, generateJSONDummyArray} = require("dummy-json")
+const {Type, generateJSONDummyArray} = require("dummy-json-js")
 
 let dummyDataConfigExplicit = {
     "stringKey": {"type": Type.String, "length": 123},

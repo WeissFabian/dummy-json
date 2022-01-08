@@ -1,5 +1,5 @@
 {
-  "name": "dummy-json",
+  "name": "dummy-json-js",
   "version": "0.0.1",
   "description": "Generate dummy json data. As file or object.",
   "main": "index.js",
