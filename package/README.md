@@ -19,21 +19,25 @@ let dummyDataConfig = {
     "nullKey": {"type": Type.Null}
 }
 ```
-You can also add explicit configurations to each Type.
+You can also add explicit configurations to some Types.
 These options are available:
 | Type | options name | default-value | example |
 | :--- | :---         | :---    | :---  |
 | String | length | 10 | "length": 123 |
 | Number | limit | 100 | "limit": 200 |
+| Integer | limit | 100 | "limit": 200 |
 | Boolean | chance | 0.5 | "chance": 0.1 |
+| StreetNumber | includeLetter | false | "includeLetter": true|
+
 
 Example:
 ```js
 let dummyDataConfigExplicit = {
     "stringKey": {"type": Type.String, "length": 123},
     "numberKey": {"type": Type.Number, "limit": 200},
+    "integerKey": {"type": Type.Integer, "limit": 200},
     "booleanKey": {"type": Type.Boolean, "chance": 0.1},
-    "nullKey": {"type": Type.Null}
+    "streetNumberKey": {"type": Type.StreetNumber, "includeLetter": true}
 }
 ```
 
@@ -67,3 +71,91 @@ let dummyDataConfigExplicit = {
 
 dummyDataArray = generateJSONDummyArray(dummyDataConfigExplicit)
 ```
+
+## Data Types
+
+# String
+Selector: Type.String
+>Example output: 'cTaGzkrOFD'
+
+**Options:**
+| options name | default-value | example |
+| :---         | :---    | :---  |
+| length | 10 | "length": 123 |
+
+
+# Decimal number
+Selector: Type.Number
+>Example output: 34.969813298829244
+
+**Options:**
+| options name | default-value | example |
+| :---         | :---    | :---  |
+| limit | 10 | "limit": 200 |
+
+# Integer
+Selector: Type.Integer
+>Example output: 34
+
+**Options:**
+| options name | default-value | example |
+| :---         | :---    | :---  |
+| limit | 10 | "limit": 200 |
+
+# Boolean
+Selector: Type.Boolean
+>Example output: true
+
+**Options:**
+| options name | default-value | example |
+| :---         | :---    | :---  |
+| chance | 0.5 | "chance": 0.1 |
+0.6 = 60% percent chance to get true
+
+# Null
+Selector: Type.Null
+>Output: null
+
+# FirstName
+Selector: Type.FirstName
+>Example output: 'Noah'
+
+# LastName
+Selector: Type.LastName
+>Example output: 'Miller'
+
+# Company
+Selector: Type.Company
+>Example output: 'Krani'
+
+# Street
+Selector: Type.Street
+>Example output: 'Industrial Dr'
+
+# Streetnumber
+Selector: Type.Streetnumber
+>Example output: 125
+
+**Options:**
+| options name | default-value | example |
+| :---         | :---    | :---  |
+| includeLetter | false | "includeLetter": true |
+include letters at end of streetnumber
+
+# City
+Selector: Type.City
+>Example output: 'Miami'
+
+# PostalCode
+Selector: Type.PostalCode
+>Example output: '16057'
+PostalCodes may also end with letters
+
+# Country
+Selector: Type.Country
+>Example output: 'Sweden'
+
+# Continent
+Selector: Type.Continent
+>Example output: 'Europe'
+
