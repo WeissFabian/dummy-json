@@ -1,9 +1,10 @@
-const {firstNames, lastNames, companies, streets, cities, postalCodes, countries} = require('./ressources/dummy-data')
+const {firstNames, lastNames, companies, streets, cities, postalCodes, countries, continents} = require('./ressources/dummy-data')
 
 const Type = {
     String: "string",
-    Boolean: "boolean",
     Number: "number",
+    Integer: "integer",
+    Boolean: "boolean",
     Null: "null",
     FirstName: "firstName",
     LastName: "lastName",
@@ -12,7 +13,8 @@ const Type = {
     Streetnumber: "streetNumber",
     City: "city",
     PostalCode: "postalCode",
-    Country: "country"
+    Country: "country",
+    Continent: "continent"
 }
 
 function generateCapitalLetter(){
@@ -89,6 +91,11 @@ function generateCountry(){
     return countries[Math.floor(Math.random() * (countrySize-1))]
 }
 
+function generateContinent(){
+    const countrySize = countries.length;
+    return countries[Math.floor(Math.random() * (countrySize-1))]
+}
+
 function generateJSONDummy(jsonDefinition){
     var jsonDummy = {}
     for(key in jsonDefinition){
@@ -98,6 +105,9 @@ function generateJSONDummy(jsonDefinition){
                 break;
             case Type.Number:
                 jsonDummy[key] = generateNumber(jsonDefinition[key]["limit"])
+                break;
+            case Type.Integer:
+                jsonDummy[key] = generateInteger(jsonDefinition[key]["limit"])
                 break;
             case Type.Boolean:
                 jsonDummy[key] = generateBoolean(jsonDefinition[key]["chance"])
@@ -128,6 +138,9 @@ function generateJSONDummy(jsonDefinition){
                 break;
             case Type.Country:
                 jsonDummy[key] = generateCountry()
+                break;
+            case Type.Continent:
+                jsonDummy[key] = generateContinent()
                 break;
             default:
                 jsonDummy[key] = undefined;

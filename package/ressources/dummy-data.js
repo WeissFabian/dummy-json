@@ -58,7 +58,6 @@ var lastNames = [
     'Mueller',
     'Obama',
     'Perez',
-    'RODRIGUEZ',
     'Sanchez',
     'Smith',
     'Taylor',
@@ -68,9 +67,9 @@ var lastNames = [
 ];
 
 var companies = [
-    'Candler',
-    'Compin',
-    'iSend',
+    'Candlera',
+    'Compinx',
+    'iSender',
     'Krani',
     'Urled',
     'Sugarfam',
@@ -223,6 +222,15 @@ var countries = [
     "USA"   
 ];
 
+var continents = [
+    "Africa",
+    "Antarctica",
+    "Asia",
+    "Australia",
+    "Europe",
+    "North America",
+    "South America"
+]
 
 
 module.exports = {
@@ -232,5 +240,6 @@ module.exports = {
     streets,
     cities,
     postalCodes,
-    countries
+    countries,
+    continents
 }
