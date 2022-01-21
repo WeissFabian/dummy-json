@@ -72,9 +72,9 @@ let dummyDataConfigExplicit = {
 dummyDataArray = generateJSONDummyArray(dummyDataConfigExplicit)
 ```
 
-## Data Types
+# Data Types
 
-# String
+## String
 Selector: Type.String
 >Example output: 'cTaGzkrOFD'
 
@@ -84,7 +84,7 @@ Selector: Type.String
 | length | 10 | "length": 123 |
 
 
-# Decimal number
+## Decimal number
 Selector: Type.Number
 >Example output: 34.969813298829244
 
@@ -93,7 +93,7 @@ Selector: Type.Number
 | :---         | :---    | :---  |
 | limit | 10 | "limit": 200 |
 
-# Integer
+## Integer
 Selector: Type.Integer
 >Example output: 34
 
@@ -102,7 +102,7 @@ Selector: Type.Integer
 | :---         | :---    | :---  |
 | limit | 10 | "limit": 200 |
 
-# Boolean
+## Boolean
 Selector: Type.Boolean
 >Example output: true
 
@@ -112,27 +112,27 @@ Selector: Type.Boolean
 | chance | 0.5 | "chance": 0.1 |
 0.6 = 60% percent chance to get true
 
-# Null
+## Null
 Selector: Type.Null
 >Output: null
 
-# FirstName
+## FirstName
 Selector: Type.FirstName
 >Example output: 'Noah'
 
-# LastName
+## LastName
 Selector: Type.LastName
 >Example output: 'Miller'
 
-# Company
+## Company
 Selector: Type.Company
 >Example output: 'Krani'
 
-# Street
+## Street
 Selector: Type.Street
 >Example output: 'Industrial Dr'
 
-# Streetnumber
+## Streetnumber
 Selector: Type.Streetnumber
 >Example output: 125
 
@@ -142,20 +142,20 @@ Selector: Type.Streetnumber
 | includeLetter | false | "includeLetter": true |
 include letters at end of streetnumber
 
-# City
+## City
 Selector: Type.City
 >Example output: 'Miami'
 
-# PostalCode
+## PostalCode
 Selector: Type.PostalCode
 >Example output: '16057'
 PostalCodes may also end with letters
 
-# Country
+## Country
 Selector: Type.Country
 >Example output: 'Sweden'
 
-# Continent
+## Continent
 Selector: Type.Continent
 >Example output: 'Europe'
 
